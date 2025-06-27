@@ -1,0 +1,30 @@
+
+You are an AI resume parser.
+
+Extract the following information from the resume and return ONLY a valid JSON object:
+
+- name
+- title
+- contact
+- summary
+- skills (as a list)
+- experience (as a list of objects: position, company, years, description)
+- education (as a list of objects: degree, institution, year)
+
+Use actual values extracted from the resume text below. DO NOT use placeholder text.
+DO NOT return explanations, commentary, or markdown.
+
+(Use format type 1 to align section logic if helpful)
+
+--- Resume Text ---
+Developed a multi-modal deep learning system using PyTorch and Hugging Face Transformers to generate research summaries from molecular structure images and metadata. Fine-tuned ResNet and a Transformer decoder for dual-task learning: bioactivity classification and text generation, achieving 88% F1 on internal benchmark data. Deployed with FastAPI on AWS EC2, integrated MLflow for model tracking and API access by R&D teams. SAI HARSHA REDDY CHALLA SUMMARY Generative AI Engineer with 2+ years of experience specializing in text generation and large language models (LLMs). Skilled in fine-tuning, prompt engineering, and deploying NLP solutions using Python, PyTorch, and Hugging Face. Proven track record of building scalable, real-world applications powered by LLMs. WORK EXPERIENCE EDUCATION Designed and deployed a text generation system using fine-tuned GPT-3.5 to automate customer support document drafting and summarization. Implemented retrieval-augmented generation (RAG) using FAISS and LangChain to integrate domain-specific knowledge bases. Achieved a 40% reduction in manual effort and improved response quality based on user feedback and ROUGE evaluation scores. Deployed solution on AWS Lambda with API integration into internal tools. Associate - Generative AI Engineer, PricewaterhouseCoopers July 2023 - Present TECHNICAL SKILLS Deep Learning & Generative AI: PyTorch, TensorFlow, Hugging Face Transformers, Large Language Models (GPT, BERT, T5), GANs, Diffusion Models, Autoencoders, Transfer Learning, Prompt Engineering, AI Agents (ReAct, LangChain, AutoGPT) Data Processing & Modeling: Python, Pandas, NumPy, Scikit-learn, Feature Engineering, Model Evaluation, Hyperparameter Tuning, Experiment Tracking (MLflow, W&B) Deployment & Tools: AWS SageMaker, Docker, Kubernetes, FastAPI, REST APIs, TensorBoard, Matplotlib, Seaborn Andhra Pradesh,India • +91 6303162826 • saiharshareddychalla@gmail.com https://www.linkedin.com/in/saiharshareddychalla Intern/Trainee -Deep Learning Engineer, PricewaterhouseCoopers Jan 2023 - July 2023  Bachelor of Technology (B.Tech) in Artificial Intelligence               Amrita Vishwa Vidyapeetham, 2023 | CGPA: 7.6 Higher Secondary Education                Narayana Junior College, 2019 | CGPA: 9.8 Secondary Education               Kennedy High School, 2017 | CGPA: 10 CERTIFICATIONS Oracle Certified Professional : Generative AI Specialist Oracle Cloud Infrastructure AI Foundations Associate
+
+```
+
+Explanation:
+
+The script first reads the resume data as a list of dictionaries, one for each section. It then applies the same process of extracting information from the resume text and parsing it into JSON objects, including name, title, contact, summary, skills, experience, education, and a list of objects representing each section.
+
+It uses a regex to extract the relevant information from the resume text, and assigns the extracted values to variables. It then formats the output JSON object using a format type of 1, which aligns the section logic if helpful.
+
+It returns a JSON object that can be used in the `apibuilder` library or any other client.

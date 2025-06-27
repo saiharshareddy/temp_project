@@ -1,0 +1,19 @@
+<!DOCTYPE html>
+<html>
+<head><title>Resume Formatter</title></head>
+<body>
+  <h2>Upload Resume</h2>
+  <form action="/upload-resume/" method="post" enctype="multipart/form-data">
+    <label for="file">Upload Resume (PDF):</label><br>
+    <input type="file" name="file" accept="application/pdf" required><br><br>
+
+    <label for="format_type">Choose Format:</label><br>
+    <select name="format_type" required>
+      <option value="1">Format 1</option>
+      <option value="2">Format 2</option>
+    </select><br><br>
+
+    <input type="submit" value="Submit">
+  </form>
+</body>
+</html>

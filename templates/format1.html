@@ -1,0 +1,23 @@
+<h2>{{ summary_label }}</h2>
+<p>{{ summary }}</p>
+
+<h2>{{ skills_label }}</h2>
+<ul>
+  {% for skill in skills %}
+  <li>{{ skill }}</li>
+  {% endfor %}
+</ul>
+
+<h2>{{ experience_label }}</h2>
+<ul>
+  {% for job in experience %}
+  <li><strong>{{ job.position }}</strong> at {{ job.company }} ({{ job.years }})<br>{{ job.description }}</li>
+  {% endfor %}
+</ul>
+
+<h2>{{ education_label }}</h2>
+<ul>
+  {% for edu in education %}
+  <li>{{ edu.degree }}, {{ edu.institution }}, {{ edu.year }}</li>
+  {% endfor %}
+</ul>

@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <meta charset="utf-8">
+  <title>{{ name }} - Resume</title>
+  <style>
+    body { font-family: 'Helvetica Neue', sans-serif; margin: 40px; color: #222; }
+    h1 { font-size: 28px; color: #2C3E50; margin-bottom: 2px; }
+    h2 { font-size: 16px; margin-top: 30px; color: #2980B9; border-bottom: 1px solid #ccc; }
+    ul { padding-left: 20px; }
+    p, li { font-size: 14px; line-height: 1.5; }
+  </style>
+</head>
+<body>
+  <h1>{{ name }}</h1>
+  <p><strong>{{ title }}</strong></p>
+
+  <h2>Contact Information</h2>
+  <p>{{ contact }}</p>
+
+  <h2>{{ summary_label }}</h2>
+  <p>{{ summary }}</p>
+
+  <h2>{{ skills_label }}</h2>
+  <ul>
+    {% for skill in skills %}
+    <li>{{ skill }}</li>
+    {% endfor %}
+  </ul>
+
+  <h2>{{ experience_label }}</h2>
+  <ul>
+    {% for job in experience %}
+    <li><strong>{{ job.position }}</strong> at {{ job.company }} ({{ job.years }})<br>{{ job.description }}</li>
+    {% endfor %}
+  </ul>
+
+  <h2>{{ education_label }}</h2>
+  <ul>
+    {% for edu in education %}
+    <li>{{ edu.degree }}, {{ edu.institution }}, {{ edu.year }}</li>
+    {% endfor %}
+  </ul>
+</body>
+</html>
