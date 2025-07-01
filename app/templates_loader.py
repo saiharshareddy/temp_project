@@ -3,9 +3,12 @@
 import fitz  # PyMuPDF
 from app.config import TEMPLATE_FOLDER
 
+# GIT CODE 2
+a=1
 def extract_text_from_pdf(path):
     doc = fitz.open(path)
     text = ""
+
     for page in doc:
         text += page.get_text()
     return text.strip()
