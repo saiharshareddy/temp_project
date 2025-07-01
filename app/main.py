@@ -2,6 +2,7 @@ from fastapi import FastAPI
 from app.routes import resume
 from app.templates_loader import load_format_templates
 
+#GIT Code
 app = FastAPI()
 
 # Load templates on startup
